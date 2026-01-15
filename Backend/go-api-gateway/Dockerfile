@@ -6,9 +6,9 @@ WORKDIR /app
 COPY common/pom.xml ./common/
 COPY common/src ./common/src
 
-# Copy config server pom and source
-COPY go-config-server/pom.xml ./
-COPY go-config-server/src ./src
+# Copy api gateway pom and source
+COPY go-api-gateway/pom.xml ./
+COPY go-api-gateway/src ./src
 
 # Build the application
 RUN mvn clean package -DskipTests -q
@@ -22,5 +22,5 @@ WORKDIR /app
 COPY --from=build --chown=app:app /app/target/*.jar /app/app.jar
 
 USER app
-EXPOSE 8888
+EXPOSE 8080
 ENTRYPOINT ["java","-jar","/app/app.jar"]
