@@ -47,7 +47,7 @@ eureka:
     register-with-eureka: false
     fetch-registry: true
     service-url:
-      default-zone: http://go-discovery-service:8761/eureka/
+      default-zone: https://discovery-87v3.onrender.com/eureka/
 
 management:
   endpoints:
