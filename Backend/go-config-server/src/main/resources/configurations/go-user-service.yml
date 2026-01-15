@@ -20,18 +20,6 @@ spring:
         jwt:
           issuer-uri: https://one-magpie-92.clerk.accounts.dev
 
-  kafka:
-    bootstrap-servers: ${KAFKA_BOOTSTRAP:localhost:9092}
-
-    consumer:
-      group-id: ${KAFKA_GROUP_ID:gameon-service}
-      auto-offset-reset: earliest
-      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-    properties:
-      spring.json.trusted.packages: "com.game.on.common.dto,com.game.on.*"
-      spring.json.value.default.type: com.game.on.common.dto.PaymentDTO
-      spring.json.use.type.headers: false
 server:
   port: 8090
 
