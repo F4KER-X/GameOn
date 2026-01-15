@@ -1,5 +1,5 @@
 # Build Stage
-FROM maven:3.9.8-eclipse-temurin-17 AS build
+FROM maven:3.9.8-eclipse-temurin-21 AS build
 WORKDIR /app
 
 # Copy the common module
@@ -14,7 +14,7 @@ RUN mvn -f common/pom.xml clean install -DskipTests -q \
     && mvn -f go-user-service/pom.xml clean package -DskipTests -q
 
 # Runtime Stage
-FROM eclipse-temurin:17-jre-alpine
+FROM eclipse-temurin:21-jre-alpine
 RUN addgroup -S app && adduser -S app -G app
 WORKDIR /app
 
