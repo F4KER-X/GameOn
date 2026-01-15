@@ -22,5 +22,5 @@ WORKDIR /app
 COPY --from=build --chown=app:app /app/go-league-service/target/*.jar /app/app.jar
 
 USER app
-EXPOSE 8090
+EXPOSE 8093
 ENTRYPOINT ["java","-jar","/app/app.jar"]
