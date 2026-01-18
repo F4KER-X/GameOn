@@ -27,4 +27,4 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: ${EUREKA_URL:https://discovery-87v3.onrender.com/eureka}
+      defaultZone: https://discovery-87v3.onrender.com/eureka
