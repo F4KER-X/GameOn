@@ -12,7 +12,7 @@ spring:
           enabled: false
       routes:
         - id: go-user-service
-          uri: lb://GO-USER-SERVICE
+          uri: lb://go-user-service
           predicates:
             - Path=/api/v1/user/**
         - id: go-team-service
