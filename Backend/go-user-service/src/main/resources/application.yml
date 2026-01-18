@@ -1,6 +1,6 @@
 spring:
   application:
-    name: go-league-service
+    name: GO-USER-SERVICE
   config:
     import: optional:configserver:https://config-r3jv.onrender.com
 
