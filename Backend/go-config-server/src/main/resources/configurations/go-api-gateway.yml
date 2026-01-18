@@ -11,7 +11,7 @@ spring:
         locator:
           enabled: false
       routes:
-        - id: go-user-service
+        - id: GO-USER-SERVICE
           uri: lb://GO-USER-SERVICE
           predicates:
             - Path=/api/v1/user/**

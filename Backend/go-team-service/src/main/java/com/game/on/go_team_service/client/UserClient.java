@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @FeignClient(
-        name = "go-user-service",
+        name = "GO-USER-SERVICE",
         configuration = FeignAuthForwardingConfig.class
 )
 public interface UserClient {
