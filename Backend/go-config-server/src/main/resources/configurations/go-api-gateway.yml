@@ -11,26 +11,26 @@ spring:
         locator:
           enabled: false
       routes:
-        - id: GO-USER-SERVICE
-          uri: lb://GO-USER-SERVICE
+        - id: go-user-service
+          uri: lb://go-user-service
           predicates:
             - Path=/api/v1/user/**
         - id: go-team-service
-          uri: lb://GO-TEAM-SERVICE
+          uri: lb://go-team-service
           predicates:
             - Path=/api/v1/teams/**,/api/v1/invites/**
         - id: go-league-service
-          uri: lb://GO-LEAGUE-SERVICE
+          uri: lb://go-league-service
           predicates:
             - Path=/api/v1/leagues/**
         - id: go-messaging-service-ws
-          uri: lb:ws://GO-MESSAGING-SERVICE
+          uri: lb:ws://go-messaging-service
           predicates:
             - Path=/api/v1/messaging/ws
           filters:
             - SetPath=/ws
         - id: go-messaging-service
-          uri: lb://GO-MESSAGING-SERVICE
+          uri: lb://go-messaging-service
           predicates:
             - Path=/api/v1/messaging/**
 

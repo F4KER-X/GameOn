@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.game.on</groupId>
-	<artifactId>GO-USER-SERVICE</artifactId>
+	<artifactId>go-user-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>GO-USER-SERVICE</name>
+	<name>go-user-service</name>
 	<description>User service for the Game On app</description>
 	<url/>
 	<licenses>

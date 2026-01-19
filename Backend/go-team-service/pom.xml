@@ -100,7 +100,7 @@
         </dependency>
         <dependency>
             <groupId>com.game.on</groupId>
-            <artifactId>GO-USER-SERVICE</artifactId>
+            <artifactId>go-user-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
