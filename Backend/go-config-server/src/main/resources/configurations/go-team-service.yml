@@ -36,7 +36,7 @@ server:
 
 eureka:
   instance:
-    hostname: https://teams-xy9f.onrender.com
+    hostname: teams-xy9f.onrender.com
 
     # We want to use HTTPS
     secure-port-enabled: true
