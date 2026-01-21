@@ -35,7 +35,22 @@ server:
   port: 8092
 
 eureka:
+  instance:
+    hostname: https://teams-xy9f.onrender.com
+
+    # We want to use HTTPS
+    secure-port-enabled: true
+    secure-port: 443
+    non-secure-port-enabled: false
+
+    # Optional but nice so Eureka links work correctly:
+    home-page-url:  https://teams-xy9f.onrender.com/
+    status-page-url: https://teams-xy9f.onrender.com/actuator/info
+    health-check-url: https://teams-xy9f.onrender.com/actuator/health
+
   client:
+    register-with-eureka: true       # default, but explicit is fine
+    fetch-registry: false            # user-service only needs to register
     service-url:
       defaultZone: https://discovery-87v3.onrender.com/eureka
 
