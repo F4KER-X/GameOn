@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: go-team-service
   datasource:
 #    url: jdbc:postgresql://localhost:5432/gameon_db
     url: jdbc:postgresql://dpg-d5jvc17pm1nc73cbddgg-a.virginia-postgres.render.com:5432/gameon_o3tt
@@ -30,9 +32,16 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: https://one-magpie-92.clerk.accounts.dev
+          
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
 
 server:
-  port: 8092
+  port: ${PORT:8092}
+  address: 0.0.0.0
 
 eureka:
   instance:
@@ -50,7 +59,7 @@ eureka:
 
   client:
     register-with-eureka: true       # default, but explicit is fine
-    fetch-registry: false            # user-service only needs to register
+    fetch-registry: true            # user-service only needs to register
     service-url:
       defaultZone: https://discovery-87v3.onrender.com/eureka
 

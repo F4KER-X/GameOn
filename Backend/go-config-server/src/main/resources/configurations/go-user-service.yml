@@ -1,4 +1,6 @@
 spring:
+  application:
+      name: go-user-service
   datasource:
 #    url: jdbc:postgresql://localhost:5432/gameon_db
     url: jdbc:postgresql://dpg-d5jvc17pm1nc73cbddgg-a.virginia-postgres.render.com:5432/gameon_o3tt
