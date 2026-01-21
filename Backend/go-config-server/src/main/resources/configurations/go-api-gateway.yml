@@ -53,6 +53,8 @@ logging:
     org.springframework.cloud.loadbalancer: DEBUG
     com.netflix.eureka: DEBUG
     org.springframework.security: DEBUG
+    org.springframework.cloud.loadbalancer.core: TRACE
+    reactor.netty: DEBUG
 
 management:
   endpoints:

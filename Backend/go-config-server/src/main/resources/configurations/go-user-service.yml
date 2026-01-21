@@ -25,6 +25,21 @@ server:
   address: 0.0.0.0
 
 eureka:
+  instance:
+    hostname: user-y2nb.onrender.com
+
+    # We want to use HTTPS
+    secure-port-enabled: true
+    secure-port: 443
+    non-secure-port-enabled: false
+
+    # Optional but nice so Eureka links work correctly:
+    home-page-url: https://user-y2nb.onrender.com/
+    status-page-url: https://user-y2nb.onrender.com/actuator/info
+    health-check-url: https://user-y2nb.onrender.com/actuator/health
+
   client:
+    register-with-eureka: true       # default, but explicit is fine
+    fetch-registry: false            # user-service only needs to register
     service-url:
       defaultZone: https://discovery-87v3.onrender.com/eureka
