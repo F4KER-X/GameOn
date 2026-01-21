@@ -47,6 +47,13 @@ eureka:
     service-url:
       defaultZone: ${EUREKA_URL:https://discovery-87v3.onrender.com/eureka}
 
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.cloud.loadbalancer: DEBUG
+    com.netflix.eureka: DEBUG
+    org.springframework.security: DEBUG
+
 management:
   endpoints:
     web:
