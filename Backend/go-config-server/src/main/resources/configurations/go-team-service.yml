@@ -32,12 +32,6 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: https://one-magpie-92.clerk.accounts.dev
-          
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info,metrics
 
 server:
   port: ${PORT:8092}
