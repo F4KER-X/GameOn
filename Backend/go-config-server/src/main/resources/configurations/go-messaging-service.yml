@@ -1,9 +1,13 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/gameon_db
-    username: username
-    password: password
+#    url: jdbc:postgresql://localhost:5432/gameon_db
+    url: jdbc:postgresql://dpg-d5jvc17pm1nc73cbddgg-a.virginia-postgres.render.com:5432/gameon_o3tt
+#    username: username
+    username: gameon_qn70_user
+#    password: password
+    password: bpKVIluvCJZZy3dzUD003cUZL4ZMPu7P
     driver-class-name: org.postgresql.Driver
+
   jpa:
     database: postgresql
     hibernate:
@@ -31,7 +35,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: https://discovery-87v3.onrender.com/eureka
 
 management:
   endpoints:

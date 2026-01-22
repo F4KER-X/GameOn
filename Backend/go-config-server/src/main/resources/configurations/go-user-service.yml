@@ -1,8 +1,13 @@
 spring:
+  application:
+      name: go-user-service
   datasource:
-    url: jdbc:postgresql://localhost:5432/gameon_db
-    username: username
-    password: password
+#    url: jdbc:postgresql://localhost:5432/gameon_db
+    url: jdbc:postgresql://dpg-d5jvc17pm1nc73cbddgg-a.virginia-postgres.render.com:5432/gameon_o3tt
+#    username: username
+    username: gameon_qn70_user
+#    password: password
+    password: bpKVIluvCJZZy3dzUD003cUZL4ZMPu7P
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -18,10 +23,25 @@ spring:
           issuer-uri: https://one-magpie-92.clerk.accounts.dev
 
 server:
-  port: 8090
+  port: ${PORT:8090}
+  address: 0.0.0.0
 
 eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: user-y2nb.onrender.com
 
+    # We want to use HTTPS
+    secure-port-enabled: true
+    secure-port: 443
+    non-secure-port-enabled: false
+
+    # Optional but nice so Eureka links work correctly:
+    home-page-url: https://user-y2nb.onrender.com/
+    status-page-url: https://user-y2nb.onrender.com/actuator/info
+    health-check-url: https://user-y2nb.onrender.com/actuator/health
+
+  client:
+    register-with-eureka: true       # default, but explicit is fine
+    fetch-registry: false            # user-service only needs to register
+    service-url:
+      defaultZone: https://discovery-87v3.onrender.com/eureka

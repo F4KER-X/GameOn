@@ -3,7 +3,7 @@ eureka:
     hostname: localhost
   client:
   service-url:
-    default-zone: http://localhost:8761/eureka
+    default-zone: ${EUREKA_URL:https://discovery-87v3.onrender.com/eureka}
 
 # Disable Eureka from overriding system properties
 spring:

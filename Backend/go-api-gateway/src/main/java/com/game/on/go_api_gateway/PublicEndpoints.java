@@ -8,6 +8,8 @@ public class PublicEndpoints {
 
     public static final String[] AUTH_WHITELIST = {
             "/api/v1/user/create",
-            "/api/v1/messaging/ws"
+            "/api/v1/messaging/ws",
+            "/actuator/**",
+            "/actuator/health"
     };
 }
